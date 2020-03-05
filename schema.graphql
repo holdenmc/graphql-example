@@ -1,0 +1,22 @@
+type Query {
+    hello: String
+    integer: Int
+    float: Float
+    boolean: Boolean
+    nonNullableField: Int!
+
+    user(id: ID!): User
+}
+
+type User {
+    id: ID
+    name: String
+}
+
+type Mutation {
+    updateUser(id: ID!, data: UpdateUserInput!): User
+}
+
+input UpdateUserInput {
+    name: String!
+}
